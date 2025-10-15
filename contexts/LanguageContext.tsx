@@ -14,8 +14,8 @@ import th from "@/locales/th.json";
 // ✅ ประเภทภาษา
 type Lang = "EN" | "TH";
 
-// ✅ ให้ Type ของ Dictionary ปลอดภัย (รวมทุกไฟล์)
-type Dictionary = typeof en & typeof th;
+// ✅ Type ของ Dictionary ใช้ en.json เป็น reference
+type Dictionary = typeof en;
 
 // ✅ เก็บไฟล์ dictionary ไว้ใน object
 const dictionaries: Record<Lang, Dictionary> = { EN: en, TH: th };
@@ -42,7 +42,6 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     if (stored === "EN" || stored === "TH") {
       setLangState(stored);
     } else {
-      // ตรวจสอบภาษาจาก browser
       const browserLang = navigator.language.startsWith("th") ? "TH" : "EN";
       setLangState(browserLang);
     }
