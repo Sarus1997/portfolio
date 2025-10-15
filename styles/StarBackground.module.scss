@@ -1,0 +1,30 @@
+.star-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -10;
+  overflow: hidden;
+
+  // 🌌 พื้นหลังสไตล์อวกาศ
+  background: radial-gradient(circle at 20% 20%,
+      rgba(40, 60, 100, 0.6),
+      transparent 70%),
+    radial-gradient(circle at 80% 80%,
+      rgba(80, 20, 100, 0.5),
+      transparent 70%),
+    radial-gradient(ellipse at center,
+      #020617 0%,
+      #000814 40%,
+      #000000 100%);
+
+  // 🪐 เพิ่ม overlay มืดโปร่งแสงให้ดูลึกขึ้น
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4); // ปรับให้มืดขึ้น/ลงได้
+    pointer-events: none;
+  }
+}

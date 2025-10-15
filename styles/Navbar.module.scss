@@ -1,0 +1,163 @@
+$primary: #64ffda;
+$white: #ffffff;
+$dark-bg: rgba(17, 24, 39, 0.85);
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 1rem;
+  /* ยกขึ้นเล็กน้อยเพื่อให้ดู floating */
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 2rem);
+  /* ให้มี margin ซ้ายขวา */
+  background: $dark-bg;
+  backdrop-filter: blur(20px) saturate(180%);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 1px rgba(100, 255, 218, 0.2);
+  z-index: 1000;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+
+  &--hidden {
+    transform: translate(-50%, -120%);
+  }
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    font-size: 2rem;
+    font-weight: 900;
+    color: $white;
+
+    .logoAccent {
+      color: $primary;
+    }
+  }
+
+  &__brand {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: $white;
+    font-size: 1.3rem;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &__lang {
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+
+    img {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    }
+
+    span {
+      color: $white;
+      font-size: 0.85rem;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+/* Sidebar */
+.sidebarOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease-in-out;
+  z-index: 1000;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.sidebar {
+  position: fixed;
+  top: 1rem;
+  /* ยกขึ้นให้ดู floating */
+  right: 0rem;
+  width: 280px;
+  height: calc(100% - 2rem);
+  background: $dark-bg;
+  backdrop-filter: blur(20px) saturate(180%);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 5px rgba(100, 255, 218, 0.2);
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out, box-shadow 0.3s ease;
+  z-index: 1001;
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+  }
+
+  &__links {
+    list-style: none;
+    padding: 2rem 0;
+
+    li {
+      a {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: $white;
+        text-decoration: none;
+        padding: 1rem 2rem;
+        border-radius: 12px;
+        transition: background 0.3s, color 0.3s;
+
+        &:hover {
+          color: $primary;
+          background: rgba(100, 255, 218, 0.1);
+        }
+      }
+    }
+  }
+}

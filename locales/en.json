@@ -1,0 +1,21 @@
+{
+  "hero": {
+    "description": "I enjoy designing and developing websites, leveraging new technology tools, and working efficiently with AI to make the most of my free time.",
+    "button": "View Resume"
+  },
+  "nav": {
+    "home": "Home",
+    "resume": "Resume",
+    "certifications": "Certifications",
+    "projects": "Projects"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "I am a passionate web developer with experience in building modern web applications. I love to learn new technologies and improve my skills.",
+    "learnMore": "Learn more"
+  },
+  "resume": {
+    "title": "Resume",
+    "description": "Preview my resume below and download in Thai or English version."
+  }
+}

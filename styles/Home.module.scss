@@ -1,0 +1,84 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  color: white;
+  border-radius: 20px;
+  padding: 2rem;
+
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    z-index: 1;
+    border-radius: inherit;
+  }
+
+  * {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.heroTitle {
+  font-size: 4rem;
+  font-weight: 400;
+  /* ฟอนต์บาง */
+  line-height: 1.2;
+  text-align: center;
+
+  /* สีแบบไล่เฉด (ฝั่งละสี) */
+  background: linear-gradient(to right, #00b4d8, #6a0dad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+
+  @media (max-width: 768px) {
+    font-size: 2.2rem;
+  }
+}
+
+
+.heroDescription {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  max-width: 700px;
+  line-height: 1.6;
+  color: #f1f1f1;
+  opacity: 0.9;
+
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+  }
+}
+
+
+.scrollIndicator {
+  position: absolute;
+  bottom: 2rem;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(8px);
+  }
+}
