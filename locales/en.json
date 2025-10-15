@@ -17,5 +17,17 @@
   "resume": {
     "title": "Resume",
     "description": "Preview my resume below and download in Thai or English version."
+  },
+  "footer": {
+    "home": "Home",
+    "resume": "Resume",
+    "certifications": "Certifications",
+    "projects": "Projects",
+    "quickLinks": "Quick Links",
+    "contact": "Get In Touch",
+    "description": "Full-stack developer passionate about creating elegant solutions and innovative web experiences.",
+    "rights": "All rights reserved.",
+    "madeWith": "Made with",
+    "inBangkok": "in Bangkok"
   }
 }

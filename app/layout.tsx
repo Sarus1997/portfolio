@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import StarBackground from "@/components/StarBackground";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import ScrollToTopButton from "@/components/ScrollToTopButton/ScrollToTopButton";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "My Portfolio",
@@ -23,6 +24,7 @@ export default function RootLayout({
           <StarBackground />
           <main>{children}</main>
           <ScrollToTopButton />
+          <Footer />
         </LanguageProvider>
       </body>
     </html>
