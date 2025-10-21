@@ -94,7 +94,16 @@ export default function AboutPage() {
               >
                 <div className={styles["profile-glow"]} />
                 <div className={styles["profile-image"]}>
-                  <div className={styles["profile-emoji"]}>👨‍💻</div>
+                  <img
+                    src="/img/avatar/profile_sr.png"
+                    alt="Profile"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      transform: "scale(1.3) translate(-5%, 10%)",
+                      transformOrigin: "center",
+                    }}
+                  />
                 </div>
                 <div className={styles["profile-badge"]}>
                   <Sparkles size={20} />
