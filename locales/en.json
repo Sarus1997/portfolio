@@ -12,7 +12,14 @@
   "about": {
     "title": "About Me",
     "description": "I am a passionate web developer with experience in building modern web applications. I love to learn new technologies and improve my skills.",
-    "contact": "Contact me"
+    "contact": "Contact me",
+    "nameTitle": "Full Name",
+    "name": "Saharat Suwannapapond",
+    "ageTitle": "Age",
+    "age": "28 years old",
+    "emailTitle": "Email",
+    "locationTitle": "Location",
+    "location": "Bangkok, Thailand"
   },
   "resume": {
     "title": "Resume",

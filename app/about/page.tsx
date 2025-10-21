@@ -16,8 +16,10 @@ import {
   Video,
 } from "lucide-react";
 import styles from "./About.module.scss";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function AboutPage() {
+  const { t } = useLanguage();
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -146,9 +148,11 @@ export default function AboutPage() {
                   >
                     <User size={20} />
                   </div>
-                  <span className={styles["info-label"]}>Full Name</span>
+                  <span className={styles["info-label"]}>
+                    {t.about.nameTitle}
+                  </span>
                 </div>
-                <p className={styles["info-value"]}>Saharat Suwannapapond</p>
+                <p className={styles["info-value"]}>{t.about.name}</p>
               </motion.div>
 
               <motion.div
@@ -161,9 +165,11 @@ export default function AboutPage() {
                   >
                     <Calendar size={20} />
                   </div>
-                  <span className={styles["info-label"]}>Age</span>
+                  <span className={styles["info-label"]}>
+                    {t.about.ageTitle}
+                  </span>
                 </div>
-                <p className={styles["info-value"]}>27 Years</p>
+                <p className={styles["info-value"]}>{t.about.age}</p>
               </motion.div>
 
               <motion.div
@@ -176,7 +182,9 @@ export default function AboutPage() {
                   >
                     <Mail size={20} />
                   </div>
-                  <span className={styles["info-label"]}>Email</span>
+                  <span className={styles["info-label"]}>
+                    {t.about.emailTitle}
+                  </span>
                 </div>
                 <p
                   className={`${styles["info-value"]} ${styles["info-email"]}`}
@@ -195,9 +203,11 @@ export default function AboutPage() {
                   >
                     <MapPin size={20} />
                   </div>
-                  <span className={styles["info-label"]}>Location</span>
+                  <span className={styles["info-label"]}>
+                    {t.about.locationTitle}
+                  </span>
                 </div>
-                <p className={styles["info-value"]}>Bangkok, Thailand 🇹🇭</p>
+                <p className={styles["info-value"]}>{t.about.location}</p>
               </motion.div>
             </div>
 
